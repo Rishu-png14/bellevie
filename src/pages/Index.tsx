@@ -8,14 +8,14 @@ import redcarpetImage from "@/assets/occasion-redcarpet.jpg";
 import coutureImage from "@/assets/occasion-couture.jpg";
 import featuredGown from "@/assets/featured-gown.jpg";
 import instagram1 from "@/assets/instagram-1.jpg";
-import instagram2 from "@/assets/instagram-2.jpg";
+import instagramPinkDress from "@/assets/instagram-pink-dress.jpeg";
 import instagram3 from "@/assets/instagram-3.jpg";
-import instagram4 from "@/assets/instagram-4.jpg";
-import instagram5 from "@/assets/instagram-5.jpg";
+import instagramGothicDress from "@/assets/instagram-gothic-dress.jpeg";
+import instagramBackDress from "@/assets/instagram-back-dress.jpeg";
 import instagram6 from "@/assets/instagram-6.jpg";
-import instagram7 from "@/assets/instagram-7.jpg";
+import instagramHatEditorial from "@/assets/instagram-hat-editorial.jpeg";
 import instagram8 from "@/assets/instagram-8.jpg";
-import instagram9 from "@/assets/instagram-9.jpg";
+import instagramHatProfile from "@/assets/instagram-hat-profile.jpeg";
 
 const Index = () => {
   const occasions = [
@@ -26,9 +26,15 @@ const Index = () => {
   ];
 
   const instagramImages = [
-    instagram1, instagram2, instagram3,
-    instagram4, instagram5, instagram6,
-    instagram7, instagram8, instagram9,
+    instagram1,
+    instagramPinkDress,
+    instagram3,
+    instagramGothicDress,
+    instagramBackDress,
+    instagram6,
+    instagramHatEditorial,
+    instagram8,
+    instagramHatProfile,
   ];
 
   return (
