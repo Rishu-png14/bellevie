@@ -12,7 +12,7 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src={heroGown} 
-            alt="BelleVie Atelier Editorial Gown" 
+            alt="BelleVie Editorial Gown" 
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
@@ -41,7 +41,7 @@ const Index = () => {
             Atelier of Dreams
           </h2>
           <p className="font-inter text-lg text-muted-foreground font-light leading-relaxed">
-            Each piece from BelleVie Atelier is a testament to refined craftsmanship and timeless beauty. 
+            Each piece from BelleVie is a testament to refined craftsmanship and timeless beauty. 
             We create gowns that tell stories, celebrate moments, and transform the art of dressing into an experience.
           </p>
         </div>

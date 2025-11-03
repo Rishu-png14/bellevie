@@ -15,7 +15,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="font-cinzel text-2xl tracking-wider text-foreground hover:text-primary transition-colors">
-            BelleVie Atelier
+            BelleVie
           </Link>
           
           <ul className="hidden md:flex items-center gap-8">
