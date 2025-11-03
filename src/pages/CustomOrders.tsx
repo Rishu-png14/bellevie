@@ -103,13 +103,38 @@ const CustomOrders = () => {
       <div className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-4xl">
           {/* Hero */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-12 animate-fade-in">
             <h1 className="font-cinzel text-5xl md:text-6xl text-foreground mb-6 tracking-wide">
               Your Dream, Tailored by BelleVie
             </h1>
             <p className="font-inter text-lg text-muted-foreground font-light max-w-2xl mx-auto">
               Each bespoke creation is a journey of collaboration, where your vision meets our craftsmanship
             </p>
+          </div>
+
+          {/* Why Custom Orders Section */}
+          <div className="max-w-3xl mx-auto mb-16 animate-fade-in">
+            <div className="bg-muted/20 border border-primary/20 rounded-lg p-8 md:p-12">
+              <h2 className="font-cinzel text-3xl text-center text-foreground mb-6 tracking-wide">
+                Why We Embrace the Bespoke
+              </h2>
+              <div className="space-y-4 font-inter text-muted-foreground font-light leading-relaxed">
+                <p>
+                  At BelleVie, we believe true luxury lies not in mass production, but in the intimate art of 
+                  creating something uniquely yours. Every woman carries within her a vision of the perfect gown—one 
+                  that speaks to her soul, celebrates her story, and captures a moment she will treasure forever.
+                </p>
+                <p>
+                  Custom orders are not merely a service we offer; they are the very heart of our atelier. 
+                  We dedicate ourselves to understanding your dreams, selecting the finest materials, and bringing 
+                  to life a creation that exists nowhere else in the world. This is fashion as it was meant to be: 
+                  personal, poetic, and profoundly meaningful.
+                </p>
+                <p className="text-primary font-normal italic">
+                  Because you deserve more than off-the-rack. You deserve a masterpiece.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Step Indicators */}
