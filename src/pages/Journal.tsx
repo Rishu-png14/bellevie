@@ -6,18 +6,21 @@ const Journal = () => {
     {
       title: "The Art of Bespoke Couture",
       date: "March 15, 2025",
+      author: "By Éloise Martin, Head of Design",
       excerpt: "Discover the meticulous craftsmanship that goes into every custom gown, from the first sketch to the final stitch.",
       image: "https://images.unsplash.com/photo-1558769132-cb1aea2f5450?w=800&auto=format&fit=crop",
     },
     {
       title: "Timeless Elegance: A Modern Interpretation",
-      date: "March 8, 2025",
+      date: "February 28, 2025",
+      author: "By Sophie Rousseau, Creative Director",
       excerpt: "How we blend classic silhouettes with contemporary design to create gowns that transcend time.",
       image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&auto=format&fit=crop",
     },
     {
       title: "Behind the Atelier: Our Creative Process",
-      date: "February 28, 2025",
+      date: "February 12, 2025",
+      author: "By Claire Beaumont, Master Seamstress",
       excerpt: "Step inside our studio and witness the journey from inspiration to masterpiece.",
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
     },
@@ -57,6 +60,9 @@ const Journal = () => {
                 <div className="space-y-3">
                   <p className="font-inter text-sm text-primary tracking-wide">
                     {article.date}
+                  </p>
+                  <p className="font-inter text-xs text-muted-foreground/70 tracking-wide">
+                    {article.author}
                   </p>
                   <h2 className="font-cinzel text-2xl text-foreground tracking-wide group-hover:text-primary transition-colors">
                     {article.title}
