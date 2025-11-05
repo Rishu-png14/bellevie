@@ -1,40 +1,106 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import dressGothic1 from "@/assets/dress-gothic-1.jpg";
 import dressGothic2 from "@/assets/dress-gothic-2.jpg";
 import dressGothic3 from "@/assets/dress-gothic-3.jpg";
 import dressVelvet from "@/assets/dress-velvet-elegance.png";
+import dressCollection1 from "@/assets/dress-collection-1.jpg";
+import dressCollection2 from "@/assets/dress-collection-2.jpg";
+import dressCollection3 from "@/assets/dress-collection-3.jpg";
+import dressCollection4 from "@/assets/dress-collection-4.jpg";
+import dressCollection5 from "@/assets/dress-collection-5.jpg";
+import dressCollection6 from "@/assets/dress-collection-6.jpg";
+import dressCollection7 from "@/assets/dress-collection-7.jpg";
+import dressCollection8 from "@/assets/dress-collection-8.jpg";
+import dressCollection9 from "@/assets/dress-collection-9.jpg";
+import dressCollection10 from "@/assets/dress-collection-10.jpg";
 
 const Shop = () => {
   const products = [
     {
       id: 1,
       name: "Crimson Ballgown",
-      price: "$4,500",
       image: dressGothic1,
       description: "Luxurious gothic couture with black lace bodice and burgundy velvet skirt",
     },
     {
       id: 2,
       name: "Gothic Romance",
-      price: "$4,200",
       image: dressGothic2,
       description: "Dramatic ballgown featuring intricate lace detailing and rich burgundy tones",
     },
     {
       id: 3,
       name: "Victorian Dream",
-      price: "$4,800",
       image: dressGothic3,
       description: "Corseted masterpiece with cascading velvet and romantic silhouette",
     },
     {
       id: 4,
       name: "Velvet Elegance",
-      price: "$3,900",
       image: dressVelvet,
       description: "Sophisticated mermaid gown in deep burgundy velvet with lace appliqué",
+    },
+    {
+      id: 5,
+      name: "Enchanted Ballgown",
+      image: dressCollection1,
+      description: "Opulent burgundy velvet with intricate black lace collar and dramatic train",
+    },
+    {
+      id: 6,
+      name: "Regal Majesty",
+      image: dressCollection2,
+      description: "Corseted beauty with statement lace sleeves and voluminous silk skirt",
+    },
+    {
+      id: 7,
+      name: "Midnight Reverie",
+      image: dressCollection3,
+      description: "Dramatic tiered ballgown in rich burgundy with black lace corset",
+    },
+    {
+      id: 8,
+      name: "Noir Sophistication",
+      image: dressCollection4,
+      description: "Black velvet mermaid gown with intricate lace sleeves and train",
+    },
+    {
+      id: 9,
+      name: "Crimson Serenade",
+      image: dressCollection5,
+      description: "Elegant burgundy satin with dramatic black lace illusion sleeves",
+    },
+    {
+      id: 10,
+      name: "Baroque Romance",
+      image: dressCollection6,
+      description: "Mermaid silhouette in burgundy satin with ornate black lace overlay",
+    },
+    {
+      id: 11,
+      name: "Velvet Whisper",
+      image: dressCollection7,
+      description: "Deep burgundy velvet mermaid with delicate lace bodice detail",
+    },
+    {
+      id: 12,
+      name: "Timeless Grace",
+      image: dressCollection8,
+      description: "Classic burgundy velvet mermaid with romantic lace appliqué",
+    },
+    {
+      id: 13,
+      name: "Moonlight Mystique",
+      image: dressCollection9,
+      description: "Black velvet mermaid with sheer tulle cape and lace bodice",
+    },
+    {
+      id: 14,
+      name: "Empress Elegance",
+      image: dressCollection10,
+      description: "Dramatic burgundy satin with corseted bodice and asymmetrical draping",
     },
   ];
 
@@ -46,14 +112,15 @@ const Shop = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h1 className="font-cinzel text-5xl md:text-6xl text-foreground mb-6 tracking-wide">
-              The Collection
+              Couture Inspiration
             </h1>
             <p className="font-inter text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              Each gown is a work of art, meticulously crafted to embody timeless elegance and unparalleled sophistication
+              Each design is a glimpse into our artistry. These pieces inspire your custom creation—
+              crafted to your vision, fitted to perfection, and made exclusively for you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {products.map((product) => (
               <div 
                 key={product.id}
@@ -73,15 +140,12 @@ const Shop = () => {
                   <p className="font-inter text-sm text-muted-foreground font-light">
                     {product.description}
                   </p>
-                  <p className="font-inter text-lg text-primary font-light tracking-wide">
-                    {product.price}
-                  </p>
-                  <Button 
-                    variant="outline"
-                    className="w-full mt-4 font-inter tracking-widest text-xs uppercase"
+                  <Link 
+                    to="/custom-orders"
+                    className="inline-block w-full mt-4 px-6 py-3 border border-border font-inter tracking-widest text-xs uppercase text-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                   >
-                    View Details
-                  </Button>
+                    Create Your Own
+                  </Link>
                 </div>
               </div>
             ))}
