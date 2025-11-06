@@ -1,8 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import dressGothic1 from "@/assets/dress-gothic-1.jpg";
-import dressGothic2 from "@/assets/dress-gothic-2.jpg";
 import dressGothic3 from "@/assets/dress-gothic-3.jpg";
 import dressVelvet from "@/assets/dress-velvet-elegance.png";
 import dressCollection1 from "@/assets/dress-collection-1.jpg";
@@ -20,84 +18,72 @@ const Shop = () => {
   const products = [
     {
       id: 1,
-      name: "Crimson Ballgown",
-      image: dressGothic1,
-      description: "Luxurious gothic couture with black lace bodice and burgundy velvet skirt",
-    },
-    {
-      id: 2,
-      name: "Gothic Romance",
-      image: dressGothic2,
-      description: "Dramatic ballgown featuring intricate lace detailing and rich burgundy tones",
-    },
-    {
-      id: 3,
       name: "Victorian Dream",
       image: dressGothic3,
       description: "Corseted masterpiece with cascading velvet and romantic silhouette",
     },
     {
-      id: 4,
+      id: 2,
       name: "Velvet Elegance",
       image: dressVelvet,
       description: "Sophisticated mermaid gown in deep burgundy velvet with lace appliqué",
     },
     {
-      id: 5,
+      id: 3,
       name: "Enchanted Ballgown",
       image: dressCollection1,
       description: "Opulent burgundy velvet with intricate black lace collar and dramatic train",
     },
     {
-      id: 6,
+      id: 4,
       name: "Regal Majesty",
       image: dressCollection2,
       description: "Corseted beauty with statement lace sleeves and voluminous silk skirt",
     },
     {
-      id: 7,
+      id: 5,
       name: "Midnight Reverie",
       image: dressCollection3,
       description: "Dramatic tiered ballgown in rich burgundy with black lace corset",
     },
     {
-      id: 8,
+      id: 6,
       name: "Noir Sophistication",
       image: dressCollection4,
       description: "Black velvet mermaid gown with intricate lace sleeves and train",
     },
     {
-      id: 9,
+      id: 7,
       name: "Crimson Serenade",
       image: dressCollection5,
       description: "Elegant burgundy satin with dramatic black lace illusion sleeves",
     },
     {
-      id: 10,
+      id: 8,
       name: "Baroque Romance",
       image: dressCollection6,
       description: "Mermaid silhouette in burgundy satin with ornate black lace overlay",
     },
     {
-      id: 11,
+      id: 9,
       name: "Velvet Whisper",
       image: dressCollection7,
       description: "Deep burgundy velvet mermaid with delicate lace bodice detail",
     },
     {
-      id: 12,
+      id: 10,
       name: "Timeless Grace",
       image: dressCollection8,
       description: "Classic burgundy velvet mermaid with romantic lace appliqué",
     },
     {
-      id: 13,
+      id: 11,
       name: "Moonlight Mystique",
       image: dressCollection9,
       description: "Black velvet mermaid with sheer tulle cape and lace bodice",
     },
     {
-      id: 14,
+      id: 12,
       name: "Empress Elegance",
       image: dressCollection10,
       description: "Dramatic burgundy satin with corseted bodice and asymmetrical draping",
