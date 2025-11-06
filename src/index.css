@@ -108,4 +108,19 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Hide scrollbar for horizontal scroll */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Ease-in-out-quint timing function */
+  .ease-in-out-quint {
+    transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  }
 }

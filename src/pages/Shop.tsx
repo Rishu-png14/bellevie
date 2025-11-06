@@ -1,5 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ParallaxSection from "@/components/ParallaxSection";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
 import dressGothic3 from "@/assets/dress-gothic-3.jpg";
 import dressVelvet from "@/assets/dress-velvet-elegance.png";
@@ -96,44 +98,47 @@ const Shop = () => {
       
       <div className="pt-32 pb-20 px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h1 className="font-cinzel text-5xl md:text-6xl text-foreground mb-6 tracking-wide">
-              Couture Inspiration
-            </h1>
-            <p className="font-inter text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              Each design is a glimpse into our artistry. These pieces inspire your custom creation—
-              crafted to your vision, fitted to perfection, and made exclusively for you.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h1 className="font-cinzel text-5xl md:text-6xl text-foreground mb-6 tracking-wide">
+                Couture Inspiration
+              </h1>
+              <p className="font-inter text-lg text-muted-foreground font-light max-w-2xl mx-auto">
+                Each design is a glimpse into our artistry. These pieces inspire your custom creation—
+                crafted to your vision, fitted to perfection, and made exclusively for you.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <div 
-                key={product.id}
-                className="group cursor-pointer"
-              >
-                <div className="aspect-[3/4] overflow-hidden mb-6 bg-muted/20">
-                  <img 
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+            {products.map((product, index) => (
+              <ScrollReveal key={product.id} delay={index * 50}>
+                <div className="group cursor-pointer">
+                  <ParallaxSection speed={0.1 * (index % 3)}>
+                    <div className="aspect-[3/4] overflow-hidden mb-6 bg-muted/20">
+                      <img 
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  </ParallaxSection>
+                  <div className="space-y-2">
+                    <h3 className="font-cinzel text-xl text-foreground tracking-wide">
+                      {product.name}
+                    </h3>
+                    <p className="font-inter text-sm text-muted-foreground font-light">
+                      {product.description}
+                    </p>
+                    <Link 
+                      to="/custom-orders"
+                      className="inline-block w-full mt-4 px-6 py-3 border border-border font-inter tracking-widest text-xs uppercase text-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
+                    >
+                      Create Your Own
+                    </Link>
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <h3 className="font-cinzel text-xl text-foreground tracking-wide">
-                    {product.name}
-                  </h3>
-                  <p className="font-inter text-sm text-muted-foreground font-light">
-                    {product.description}
-                  </p>
-                  <Link 
-                    to="/custom-orders"
-                    className="inline-block w-full mt-4 px-6 py-3 border border-border font-inter tracking-widest text-xs uppercase text-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
-                  >
-                    Create Your Own
-                  </Link>
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import FabricSelector from "@/components/FabricSelector";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -224,7 +225,7 @@ const CustomOrders = () => {
 
             {/* Step 2: Fabric Preference */}
             {currentStep === 2 && (
-              <div className="animate-fade-in space-y-8">
+              <div className="animate-fade-in space-y-12">
                 <div className="text-center mb-8">
                   <h2 className="font-cinzel text-3xl text-foreground mb-3 tracking-wide">
                     Choose Your Fabric
@@ -234,37 +235,11 @@ const CustomOrders = () => {
                   </p>
                 </div>
 
-                <RadioGroup
-                  value={fabricPreference}
-                  onValueChange={(value) => setValue("fabricPreference", value)}
-                  className="space-y-4"
-                >
-                  {fabrics.map((fabric) => (
-                    <div
-                      key={fabric.value}
-                      className={`border rounded-md p-6 cursor-pointer transition-all duration-300 ${
-                        fabricPreference === fabric.value
-                          ? "border-primary bg-primary/5"
-                          : "border-border hover:border-primary/50"
-                      }`}
-                      onClick={() => setValue("fabricPreference", fabric.value)}
-                    >
-                      <div className="flex items-start gap-4">
-                        <RadioGroupItem value={fabric.value} id={fabric.value} className="mt-1" />
-                        <div className="flex-1">
-                          <Label htmlFor={fabric.value} className="font-cinzel text-lg cursor-pointer">
-                            {fabric.label}
-                          </Label>
-                          <p className="font-inter text-sm text-muted-foreground mt-1">
-                            {fabric.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </RadioGroup>
+                {/* Fabric Selector Component */}
+                <FabricSelector onSelect={(value) => setValue("fabricPreference", value)} />
+
                 {errors.fabricPreference && (
-                  <p className="text-sm text-destructive font-inter">{errors.fabricPreference.message}</p>
+                  <p className="text-sm text-destructive font-inter text-center">{errors.fabricPreference.message}</p>
                 )}
 
                 <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent my-8" />
