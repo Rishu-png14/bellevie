@@ -36,7 +36,6 @@ const Contact = () => {
   });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
     setIsSubmitted(true);
     form.reset();
     

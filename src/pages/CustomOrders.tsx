@@ -47,7 +47,6 @@ const CustomOrders = () => {
   const consultationRequested = watch("consultationRequested");
 
   const onSubmit = (data: CustomOrderForm) => {
-    console.log("Custom Order Submitted:", data);
     setIsSubmitted(true);
   };
 
