@@ -71,12 +71,6 @@ const Shop = () => {
           description: "Corseted masterpiece with cascading velvet and romantic Victorian silhouette",
         },
         {
-          id: 7,
-          name: "Gothic Romance",
-          image: dressGothic1,
-          description: "Dramatic black velvet with architectural draping and ethereal presence",
-        },
-        {
           id: 8,
           name: "Empress of Shadows",
           image: dressGothic2,
@@ -105,12 +99,6 @@ const Shop = () => {
           name: "The Eternal Promise",
           image: occasionWedding,
           description: "Ivory silk with hand-embroidered lace and flowing cathedral train",
-        },
-        {
-          id: 12,
-          name: "Garden of Dreams",
-          image: featuredGown,
-          description: "Soft blush tulle with delicate floral appliqués and romantic silhouette",
         },
       ],
     },
