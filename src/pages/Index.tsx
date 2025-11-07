@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import heroGown from "@/assets/hero-gown.jpg";
 import bellevieLogo from "@/assets/bellevie-logo.png";
 import weddingImage from "@/assets/occasion-wedding.jpg";
-import eveningImage from "@/assets/occasion-evening.jpg";
+import eveningImage from "@/assets/occasion-evening-new.jpg";
 import redcarpetImage from "@/assets/occasion-redcarpet.jpg";
 import coutureImage from "@/assets/occasion-couture.jpg";
 import featuredGown from "@/assets/featured-gown.jpg";
