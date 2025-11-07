@@ -21,6 +21,11 @@ import featuredGown from "@/assets/featured-gown.jpg";
 import occasionWedding from "@/assets/occasion-wedding.jpg";
 import occasionEvening from "@/assets/occasion-evening-new.jpg";
 import occasionRedcarpet from "@/assets/occasion-redcarpet.jpg";
+import dressGrayCorseted from "@/assets/dress-gray-corseted-lace.jpg";
+import dressWhiteTiered from "@/assets/dress-white-tiered-ballgown.jpg";
+import dressBurgundyLaceTrain from "@/assets/dress-burgundy-lace-train.jpg";
+import dressBurgundyHighneck from "@/assets/dress-burgundy-highneck.jpg";
+import dressBurgundyVelvetBallgown from "@/assets/dress-burgundy-velvet-ballgown.jpg";
 
 const Shop = () => {
   const categories = [
@@ -58,6 +63,12 @@ const Shop = () => {
           image: occasionEvening,
           description: "Luminous white silk with celestial draping and crystal embellishments",
         },
+        {
+          id: 19,
+          name: "Silk Enchantment",
+          image: dressBurgundyHighneck,
+          description: "High-neck burgundy silk with delicate lace illusion and statuesque silhouette",
+        },
       ],
     },
     {
@@ -88,6 +99,18 @@ const Shop = () => {
           image: dressCollection10,
           description: "Dramatic burgundy satin with corseted bodice and asymmetrical draping",
         },
+        {
+          id: 20,
+          name: "Silver Garden",
+          image: dressGrayCorseted,
+          description: "Charcoal silk with pearl halter neckline and hand-embroidered floral lace",
+        },
+        {
+          id: 21,
+          name: "Velvet Kingdom",
+          image: dressBurgundyVelvetBallgown,
+          description: "Majestic burgundy velvet ballgown with corseted bodice and cascading gathered skirt",
+        },
       ],
     },
     {
@@ -99,6 +122,12 @@ const Shop = () => {
           name: "The Eternal Promise",
           image: occasionWedding,
           description: "Ivory silk with hand-embroidered lace and flowing cathedral train",
+        },
+        {
+          id: 22,
+          name: "Cloud Waltz",
+          image: dressWhiteTiered,
+          description: "Ivory organza ballgown with corseted bodice and cascading ruffled tiers",
         },
       ],
     },
@@ -141,6 +170,12 @@ const Shop = () => {
           name: "Scarlet Serenade",
           image: occasionRedcarpet,
           description: "Bold red silk with daring silhouette and modern sophistication",
+        },
+        {
+          id: 23,
+          name: "The Sovereign",
+          image: dressBurgundyLaceTrain,
+          description: "Burgundy mermaid gown with black lace illusion, dramatic train, and regal presence",
         },
       ],
     },
