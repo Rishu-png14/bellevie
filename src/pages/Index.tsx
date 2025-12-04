@@ -1,8 +1,11 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
 import heroGown from "@/assets/hero-gown.jpg";
 import bellevieLogo from "@/assets/bellevie-logo.png";
 import weddingImage from "@/assets/occasion-wedding.jpg";
@@ -24,6 +27,8 @@ import fabricVelvet from "@/assets/fabric-velvet.jpg";
 import fabricLace from "@/assets/fabric-lace.jpg";
 
 const Index = () => {
+  const [isDiscoverOpen, setIsDiscoverOpen] = useState(false);
+  const navigate = useNavigate();
   const occasions = [
     { title: "Weddings", image: weddingImage },
     { title: "Evenings", image: eveningImage },
@@ -72,12 +77,44 @@ const Index = () => {
             <h2 className="font-cinzel text-4xl md:text-6xl text-primary mb-6 tracking-wider">
               Timeless. Poetic. Modern.
             </h2>
-            <Button 
-              size="lg" 
-              className="font-inter tracking-widest text-sm uppercase bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-6 h-auto"
-            >
-              Discover the Collection
-            </Button>
+            <div className="relative inline-block">
+              <Button 
+                size="lg" 
+                className="font-inter tracking-widest text-sm uppercase bg-primary text-primary-foreground hover:bg-primary/90 px-12 py-6 h-auto"
+                onClick={() => setIsDiscoverOpen(!isDiscoverOpen)}
+              >
+                Discover the Collection
+                <ChevronDown 
+                  size={18} 
+                  className={`ml-2 transition-transform duration-300 ${isDiscoverOpen ? 'rotate-180' : ''}`}
+                />
+              </Button>
+              
+              {/* Dropdown Options */}
+              {isDiscoverOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-background/95 backdrop-blur-sm border border-border rounded-lg overflow-hidden animate-fade-in shadow-xl min-w-[200px]">
+                  <button
+                    onClick={() => {
+                      setIsDiscoverOpen(false);
+                      navigate('/shop');
+                    }}
+                    className="w-full px-8 py-4 font-inter text-sm tracking-wide text-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-center"
+                  >
+                    Shop
+                  </button>
+                  <div className="border-t border-border/50" />
+                  <button
+                    onClick={() => {
+                      setIsDiscoverOpen(false);
+                      navigate('/custom-orders');
+                    }}
+                    className="w-full px-8 py-4 font-inter text-sm tracking-wide text-foreground hover:bg-primary hover:text-primary-foreground transition-colors text-center"
+                  >
+                    Custom Orders
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
