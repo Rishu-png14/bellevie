@@ -1,8 +1,9 @@
+import { useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ParallaxSection from "@/components/ParallaxSection";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Link } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import dressGothic1 from "@/assets/dress-gothic-1.jpg";
 import dressGothic2 from "@/assets/dress-gothic-2.jpg";
 import dressGothic3 from "@/assets/dress-gothic-3.jpg";
@@ -181,12 +182,26 @@ const Shop = () => {
     },
   ];
 
+  // Create refs for each category's carousel
+  const carouselRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const scrollCarousel = (index: number, direction: 'left' | 'right') => {
+    const carousel = carouselRefs.current[index];
+    if (carousel) {
+      const scrollAmount = carousel.clientWidth * 0.8;
+      carousel.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="pt-32 pb-20 px-6">
-        <div className="container mx-auto max-w-7xl">
+      <div className="pt-32 pb-20">
+        <div className="container mx-auto max-w-7xl px-6">
           <ScrollReveal>
             <div className="text-center mb-20">
               <h1 className="font-cinzel text-5xl md:text-6xl text-foreground mb-6 tracking-wide">
@@ -198,11 +213,13 @@ const Shop = () => {
               </p>
             </div>
           </ScrollReveal>
+        </div>
 
-          {categories.map((category, categoryIndex) => (
-            <div key={category.title} className="mb-24">
+        {categories.map((category, categoryIndex) => (
+          <div key={category.title} className="mb-24">
+            <div className="container mx-auto max-w-7xl px-6">
               <ScrollReveal delay={categoryIndex * 100}>
-                <div className="mb-12 relative">
+                <div className="mb-8 relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 transform -skew-y-1" />
                   <div className="relative py-8 px-6 text-center">
                     <h2 className="font-cinzel text-3xl md:text-4xl text-foreground mb-3 tracking-wide">
@@ -214,42 +231,67 @@ const Shop = () => {
                   </div>
                 </div>
               </ScrollReveal>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Horizontal Carousel */}
+            <div className="relative group">
+              {/* Left Arrow */}
+              <button
+                onClick={() => scrollCarousel(categoryIndex, 'left')}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-background/90 backdrop-blur-sm border border-border rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft size={24} />
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                onClick={() => scrollCarousel(categoryIndex, 'right')}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-background/90 backdrop-blur-sm border border-border rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary"
+                aria-label="Scroll right"
+              >
+                <ChevronRight size={24} />
+              </button>
+
+              {/* Carousel Container */}
+              <div
+                ref={(el) => (carouselRefs.current[categoryIndex] = el)}
+                className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-6 md:px-12 pb-4"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
                 {category.dresses.map((dress, index) => (
-                  <ScrollReveal key={dress.id} delay={index * 50}>
-                    <div className="group cursor-pointer">
-                      <ParallaxSection speed={0.1 * (index % 3)}>
-                        <div className="aspect-[3/4] overflow-hidden mb-6 bg-muted/20 relative">
-                          <img 
-                            src={dress.image}
-                            alt={dress.name}
-                            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
-                          />
-                          <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-all duration-700" />
-                        </div>
-                      </ParallaxSection>
-                      <div className="space-y-2">
-                        <h3 className="font-cinzel text-xl text-foreground tracking-wide group-hover:text-primary transition-colors duration-300">
-                          {dress.name}
-                        </h3>
-                        <p className="font-inter text-sm text-muted-foreground font-light leading-relaxed">
-                          {dress.description}
-                        </p>
-                        <Link 
-                          to="/custom-orders"
-                          className="inline-block w-full mt-4 px-6 py-3 border border-border font-inter tracking-widest text-xs uppercase text-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 ease-in-out-quint"
-                        >
-                          Create Your Own
-                        </Link>
-                      </div>
+                  <div 
+                    key={dress.id} 
+                    className="group/card cursor-pointer flex-shrink-0 w-[280px] md:w-[320px] lg:w-[360px]"
+                  >
+                    <div className="aspect-[3/4] overflow-hidden mb-6 bg-muted/20 relative">
+                      <img 
+                        src={dress.image}
+                        alt={dress.name}
+                        className="w-full h-full object-cover transition-all duration-700 group-hover/card:scale-105 group-hover/card:brightness-110"
+                      />
+                      <div className="absolute inset-0 bg-primary/0 group-hover/card:bg-primary/5 transition-all duration-700" />
                     </div>
-                  </ScrollReveal>
+                    <div className="space-y-2">
+                      <h3 className="font-cinzel text-xl text-foreground tracking-wide group-hover/card:text-primary transition-colors duration-300">
+                        {dress.name}
+                      </h3>
+                      <p className="font-inter text-sm text-muted-foreground font-light leading-relaxed line-clamp-2">
+                        {dress.description}
+                      </p>
+                      <Link 
+                        to="/custom-orders"
+                        className="inline-block w-full mt-4 px-6 py-3 border border-border font-inter tracking-widest text-xs uppercase text-center hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 ease-in-out-quint"
+                      >
+                        Create Your Own
+                      </Link>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
 
       <Footer />
