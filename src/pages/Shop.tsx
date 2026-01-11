@@ -36,6 +36,11 @@ import dressNoirLaceCascade from "@/assets/dress-noir-lace-cascade.jpg";
 import dressNoirLaceDrama from "@/assets/dress-noir-lace-drama.jpg";
 import dressNoirKeyhouleTrain from "@/assets/dress-noir-keyhole-train.jpg";
 import dressBridalLaceVeil from "@/assets/dress-bridal-lace-veil.jpg";
+import dressIvoryHalterMermaid from "@/assets/dress-ivory-halter-mermaid.jpg";
+import dressBurgundyTulleBallgown from "@/assets/dress-burgundy-tulle-ballgown.jpg";
+import dressNoirLaceHighneck from "@/assets/dress-noir-lace-highneck.jpg";
+import dressNoirVneckMermaid from "@/assets/dress-noir-vneck-mermaid.jpg";
+import dressBurgundyTieredVeil from "@/assets/dress-burgundy-tiered-veil.jpg";
 
 const Shop = () => {
   const categories = [
@@ -84,6 +89,12 @@ const Shop = () => {
           name: "Noir Lace Cascade",
           image: dressNoirLaceDrama,
           description: "Flowing black lace gown with dramatic cape sleeves and ethereal movement",
+        },
+        {
+          id: 32,
+          name: "Noir V-Neck Mystique",
+          image: dressNoirVneckMermaid,
+          description: "Sleek black lace v-neck mermaid gown with sculpted silhouette and dramatic presence",
         },
       ],
     },
@@ -151,6 +162,18 @@ const Shop = () => {
           image: dressNoirLaceCascade,
           description: "Rose-tinted noir lace gown with halter neck and dramatic flowing lace sleeves",
         },
+        {
+          id: 33,
+          name: "Noir Lace Symphony",
+          image: dressNoirLaceHighneck,
+          description: "Black lace high-neck gown with sheer sleeves, crystal belt, and sweeping train",
+        },
+        {
+          id: 34,
+          name: "Burgundy Enchantress",
+          image: dressBurgundyTulleBallgown,
+          description: "Off-shoulder burgundy tulle ballgown with delicate lace bodice and flowing cape",
+        },
       ],
     },
     {
@@ -174,6 +197,12 @@ const Shop = () => {
           name: "Lace Reverie",
           image: dressBridalLaceVeil,
           description: "Romantic ivory lace mermaid gown with bishop sleeves and cathedral veil",
+        },
+        {
+          id: 35,
+          name: "Ivory Goddess",
+          image: dressIvoryHalterMermaid,
+          description: "Elegant ivory halter mermaid gown with draped ruching and timeless sophistication",
         },
       ],
     },
@@ -228,6 +257,12 @@ const Shop = () => {
           name: "Noir Keyhole Majesty",
           image: dressNoirKeyhouleTrain,
           description: "Black lace halter gown with keyhole neckline, pearl accent and sweeping train",
+        },
+        {
+          id: 36,
+          name: "Burgundy Empress",
+          image: dressBurgundyTieredVeil,
+          description: "Majestic burgundy tiered tulle gown with corseted bodice and dramatic flowing veil",
         },
       ],
     },
