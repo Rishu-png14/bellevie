@@ -47,12 +47,6 @@ const Shop = () => {
           description: "Opulent burgundy velvet with dramatic black lace collar and cathedral train",
         },
         {
-          id: 3,
-          name: "Velvet Sonata",
-          image: dressVelvet,
-          description: "Deep burgundy mermaid gown with delicate lace appliqué, a symphony in fabric",
-        },
-        {
           id: 4,
           name: "Baroque Twilight",
           image: dressCollection6,
