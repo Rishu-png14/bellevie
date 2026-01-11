@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDiscoverOpen, setIsDiscoverOpen] = useState(false);
   
   const navItems = [
     { name: "Home", path: "/" },
@@ -54,85 +53,17 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <ul className="md:hidden pt-6 pb-2 space-y-4 animate-fade-in">
-            <li>
-              <Link
-                to="/"
-                className="block font-inter text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-            
-            {/* Discover the Collection - Mobile Only */}
-            <li>
-              <button
-                onClick={() => setIsDiscoverOpen(!isDiscoverOpen)}
-                className="w-full flex items-center justify-between font-inter text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors py-2"
-              >
-                Discover the Collection
-                <ChevronDown 
-                  size={16} 
-                  className={`transition-transform ${isDiscoverOpen ? 'rotate-180' : ''}`}
-                />
-              </button>
-              {isDiscoverOpen && (
-                <ul className="ml-4 mt-2 space-y-2 animate-fade-in">
-                  <li>
-                    <Link
-                      to="/shop"
-                      className="block font-inter text-sm tracking-wide text-foreground/60 hover:text-primary transition-colors py-2"
-                      onClick={() => {
-                        setIsOpen(false);
-                        setIsDiscoverOpen(false);
-                      }}
-                    >
-                      Shop
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/custom-orders"
-                      className="block font-inter text-sm tracking-wide text-foreground/60 hover:text-primary transition-colors py-2"
-                      onClick={() => {
-                        setIsOpen(false);
-                        setIsDiscoverOpen(false);
-                      }}
-                    >
-                      Custom Orders
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            <li>
-              <Link
-                to="/atelier-story"
-                className="block font-inter text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Atelier Story
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/journal"
-                className="block font-inter text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Journal
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contact"
-                className="block font-inter text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  className="block font-inter text-sm tracking-wide text-foreground/80 hover:text-primary transition-colors py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         )}
       </div>
