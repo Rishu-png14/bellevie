@@ -14,7 +14,69 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      custom_order_requests: {
+        Row: {
+          consultation_requested: boolean
+          created_at: string
+          email: string
+          fabric_preference: string
+          id: string
+          inspiration_file_path: string | null
+          measurements: string | null
+          name: string
+          phone: string
+          vision: string
+        }
+        Insert: {
+          consultation_requested?: boolean
+          created_at?: string
+          email: string
+          fabric_preference: string
+          id?: string
+          inspiration_file_path?: string | null
+          measurements?: string | null
+          name: string
+          phone: string
+          vision: string
+        }
+        Update: {
+          consultation_requested?: boolean
+          created_at?: string
+          email?: string
+          fabric_preference?: string
+          id?: string
+          inspiration_file_path?: string | null
+          measurements?: string | null
+          name?: string
+          phone?: string
+          vision?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
