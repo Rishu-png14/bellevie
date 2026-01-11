@@ -43,7 +43,7 @@ const AtelierStory = () => {
             <div className="space-y-6 font-inter text-lg text-muted-foreground font-light leading-relaxed">
               <p>
                 BelleVie began not as a brand, but as a quiet rebellion against the ephemeral nature of modern fashion. 
-                In a world of fleeting trends and disposable beauty, we sought to create something enduring—gowns that 
+                In a world of fleeting trends and disposable beauty, we sought to create something enduring. Gowns that 
                 would become heirlooms, designs that would transcend seasons, and moments that would be remembered forever.
               </p>
               <p>
@@ -130,7 +130,7 @@ const AtelierStory = () => {
             <div className="space-y-6 font-inter text-lg text-muted-foreground font-light leading-relaxed">
               <p>
                 When I first envisioned BelleVie, I dreamed of creating more than beautiful garments. I wanted to build 
-                a sanctuary where women could discover the gown that already existed in their hearts—the one they had 
+                a sanctuary where women could discover the gown that already existed in their hearts. The one they had 
                 imagined for years, or perhaps never knew they needed until the moment they saw it.
               </p>
               <p>
@@ -139,7 +139,7 @@ const AtelierStory = () => {
                 and lace, to transform moments into memories that will last forever.
               </p>
               <p>
-                BelleVie is not just a fashion house. It is a promise—that you will be seen, heard, and celebrated. 
+                BelleVie is not just a fashion house. It is a promise that you will be seen, heard, and celebrated. 
                 That your moment will be as extraordinary as you are. That your gown will be a masterpiece worthy of 
                 the woman wearing it.
               </p>

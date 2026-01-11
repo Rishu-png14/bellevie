@@ -127,7 +127,7 @@ const Index = () => {
               Our Philosophy
             </h2>
             <p className="font-inter text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-12">
-              At BelleVie, we believe that fashion transcends fabric and form—it becomes poetry in motion, 
+              At BelleVie, we believe that fashion transcends fabric and form. It becomes poetry in motion, 
               a story woven into every stitch. We craft not just dresses, but heirlooms of elegance, 
               designed for those who seek beauty that whispers rather than shouts. Each piece is an invitation 
               to celebrate life's most precious moments with grace, sophistication, and timeless allure.
@@ -136,14 +136,14 @@ const Index = () => {
             {/* Designer Note */}
             <div className="mt-16 pt-12 border-t border-border/30">
               <p className="font-inter text-base md:text-lg text-muted-foreground/90 font-light italic leading-relaxed mb-6">
-                "When I founded this atelier, I dreamed of creating gowns that would become part of your story—
-                pieces you'd cherish not just for their beauty, but for the memories they hold. Every fabric we select, 
+                "When I founded this atelier, I dreamed of creating gowns that would become part of your story. 
+                Pieces you'd cherish not just for their beauty, but for the memories they hold. Every fabric we select, 
                 every seam we finish, carries with it our dedication to making you feel extraordinary. 
-                Because true elegance isn't about perfection—it's about authenticity, grace, and the confidence 
+                Because true elegance isn't about perfection. It's about authenticity, grace, and the confidence 
                 to embrace your own unique beauty."
               </p>
               <p className="font-cinzel text-sm tracking-widest text-foreground/70">
-                — BelleVie Atelier
+                BelleVie Atelier
               </p>
             </div>
           </div>

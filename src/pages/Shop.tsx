@@ -294,7 +294,7 @@ const Shop = () => {
                 Couture Collections
               </h1>
               <p className="font-inter text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-                Each design is a glimpse into our artistry. These pieces inspire your custom creation—
+                Each design is a glimpse into our artistry. These pieces inspire your custom creation, 
                 crafted to your vision, fitted to perfection, and made exclusively for you.
               </p>
             </div>

@@ -123,7 +123,7 @@ const CustomOrders = () => {
               <div className="space-y-4 font-inter text-muted-foreground font-light leading-relaxed">
                 <p>
                   At BelleVie, we believe true luxury lies not in mass production, but in the intimate art of 
-                  creating something uniquely yours. Every woman carries within her a vision of the perfect gown—one 
+                  creating something uniquely yours. Every woman carries within her a vision of the perfect gown, one 
                   that speaks to her soul, celebrates her story, and captures a moment she will treasure forever.
                 </p>
                 <p>
