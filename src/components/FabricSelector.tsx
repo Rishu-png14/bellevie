@@ -19,37 +19,37 @@ const fabrics: Fabric[] = [
     name: "Silk",
     image: fabricSilk,
     value: "silk",
-    description: "Timeless as a lover's promise. Silk moves with you like water, catching light in whispers. It holds your body's warmth and carries elegance without effort—a fabric that speaks in sighs.",
+    description: "Timeless as a lover's promise. Silk moves with you like water, catching light in whispers. It holds your body's warmth and carries elegance without effort, a fabric that speaks in sighs.",
   },
   {
     name: "Velvet",
     image: fabricVelvet,
     value: "velvet",
-    description: "Rich as night, deep as memory. Velvet is luxury you can feel—soft under your fingertips, bold in its presence. It demands attention while cradling you in comfort, like royalty wrapped in twilight.",
+    description: "Rich as night, deep as memory. Velvet is luxury you can feel, soft under your fingertips, bold in its presence. It demands attention while cradling you in comfort, like royalty wrapped in twilight.",
   },
   {
     name: "Lace",
     image: fabricLace,
     value: "lace",
-    description: "Delicate as a secret, intricate as devotion. Lace is romance made tangible—woven by hand, stitched with care. It reveals and conceals in harmony, a love letter traced in thread.",
+    description: "Delicate as a secret, intricate as devotion. Lace is romance made tangible, woven by hand, stitched with care. It reveals and conceals in harmony, a love letter traced in thread.",
   },
   {
     name: "Satin",
     image: fabricSatin,
     value: "satin",
-    description: "Smooth as moonlight on still water. Satin glides over skin with an almost liquid grace, reflecting light in gentle waves. It's elegance distilled—pure, polished, and endlessly refined.",
+    description: "Smooth as moonlight on still water. Satin glides over skin with an almost liquid grace, reflecting light in gentle waves. It's elegance distilled, pure, polished, and endlessly refined.",
   },
   {
     name: "Organza",
     image: fabricOrganza,
     value: "organza",
-    description: "Light as breath, ethereal as morning mist. Organza floats and dances, creating volume without weight. It's the fabric of dreams—sheer, delicate, and impossibly romantic.",
+    description: "Light as breath, ethereal as morning mist. Organza floats and dances, creating volume without weight. It's the fabric of dreams, sheer, delicate, and impossibly romantic.",
   },
   {
     name: "Chiffon",
     image: fabricChiffon,
     value: "chiffon",
-    description: "Soft as a whisper, flowing like poetry. Chiffon drapes with effortless grace, moving as you move. It's femininity captured in fabric—gentle, dreamy, and timelessly beautiful.",
+    description: "Soft as a whisper, flowing like poetry. Chiffon drapes with effortless grace, moving as you move. It's femininity captured in fabric, gentle, dreamy, and timelessly beautiful.",
   },
 ];
 
