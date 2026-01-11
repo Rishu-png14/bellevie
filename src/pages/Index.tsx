@@ -22,9 +22,9 @@ import instagram6 from "@/assets/instagram-6.jpg";
 import instagramHatEditorial from "@/assets/instagram-hat-editorial.jpeg";
 import instagram8 from "@/assets/instagram-8.jpg";
 import instagramHatProfile from "@/assets/instagram-hat-profile.jpeg";
-import fabricSilk from "@/assets/fabric-silk.jpg";
-import fabricVelvet from "@/assets/fabric-velvet.jpg";
-import fabricLace from "@/assets/fabric-lace.jpg";
+import dressShowcase1 from "@/assets/dress-showcase-1.png";
+import dressShowcase2 from "@/assets/dress-showcase-2.jpg";
+import dressShowcase3 from "@/assets/dress-showcase-3.jpg";
 
 const Index = () => {
   const [isDiscoverOpen, setIsDiscoverOpen] = useState(false);
@@ -150,14 +150,14 @@ const Index = () => {
         </ScrollReveal>
       </section>
 
-      {/* Cinematic Fabric Close-ups */}
+      {/* Dress Showcase */}
       <section className="py-20">
         <ScrollReveal delay={200}>
           <div className="relative w-full h-[50vh] overflow-hidden">
             <ParallaxSection speed={0.4}>
               <img 
-                src={fabricSilk} 
-                alt="Silk fabric texture" 
+                src={dressShowcase1} 
+                alt="Elegant black lace gown" 
                 className="w-full h-full object-cover scale-110"
               />
             </ParallaxSection>
@@ -169,8 +169,8 @@ const Index = () => {
           <div className="relative w-full h-[50vh] overflow-hidden mt-20">
             <ParallaxSection speed={0.5}>
               <img 
-                src={fabricVelvet} 
-                alt="Velvet fabric texture" 
+                src={dressShowcase2} 
+                alt="White lace bridal gown" 
                 className="w-full h-full object-cover scale-110"
               />
             </ParallaxSection>
@@ -182,8 +182,8 @@ const Index = () => {
           <div className="relative w-full h-[50vh] overflow-hidden mt-20">
             <ParallaxSection speed={0.6}>
               <img 
-                src={fabricLace} 
-                alt="Lace fabric texture" 
+                src={dressShowcase3} 
+                alt="Ivory tiered tulle gown" 
                 className="w-full h-full object-cover scale-110"
               />
             </ParallaxSection>
