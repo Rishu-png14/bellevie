@@ -27,6 +27,15 @@ import dressWhiteTiered from "@/assets/dress-white-tiered-ballgown.jpg";
 import dressBurgundyLaceTrain from "@/assets/dress-burgundy-lace-train.jpg";
 import dressBurgundyHighneck from "@/assets/dress-burgundy-highneck.jpg";
 import dressBurgundyVelvetBallgown from "@/assets/dress-burgundy-velvet-ballgown.jpg";
+// New dress imports
+import dressNoirSilhouette from "@/assets/dress-noir-silhouette.jpg";
+import dressLaceMinuet from "@/assets/dress-lace-minuet.jpg";
+import dressMidnightLacePearl from "@/assets/dress-midnight-lace-pearl.jpg";
+import dressNoirLaceGloves from "@/assets/dress-noir-lace-gloves.jpg";
+import dressNoirLaceCascade from "@/assets/dress-noir-lace-cascade.jpg";
+import dressNoirLaceDrama from "@/assets/dress-noir-lace-drama.jpg";
+import dressNoirKeyhouleTrain from "@/assets/dress-noir-keyhole-train.jpg";
+import dressBridalLaceVeil from "@/assets/dress-bridal-lace-veil.jpg";
 
 const Shop = () => {
   const categories = [
@@ -63,6 +72,18 @@ const Shop = () => {
           name: "Silk Enchantment",
           image: dressBurgundyHighneck,
           description: "High-neck burgundy silk with delicate lace illusion and statuesque silhouette",
+        },
+        {
+          id: 24,
+          name: "Midnight Lace Dream",
+          image: dressMidnightLacePearl,
+          description: "Sheer black lace halter gown with pearl belt accent and dramatic train",
+        },
+        {
+          id: 25,
+          name: "Noir Lace Cascade",
+          image: dressNoirLaceDrama,
+          description: "Flowing black lace gown with dramatic cape sleeves and ethereal movement",
         },
       ],
     },
@@ -106,6 +127,30 @@ const Shop = () => {
           image: dressBurgundyVelvetBallgown,
           description: "Majestic burgundy velvet ballgown with corseted bodice and cascading gathered skirt",
         },
+        {
+          id: 26,
+          name: "Noir Silhouette",
+          image: dressNoirSilhouette,
+          description: "Sleek black bodysuit with sculpted silhouette, a study in modern minimalism",
+        },
+        {
+          id: 27,
+          name: "Lace Minuet",
+          image: dressLaceMinuet,
+          description: "Black lace corset mini with puffed tulle skirt and romantic white bow detail",
+        },
+        {
+          id: 28,
+          name: "Noir Lace Elegance",
+          image: dressNoirLaceGloves,
+          description: "High-neck black lace mermaid with matching opera gloves and flowing train",
+        },
+        {
+          id: 29,
+          name: "Midnight Cascade",
+          image: dressNoirLaceCascade,
+          description: "Rose-tinted noir lace gown with halter neck and dramatic flowing lace sleeves",
+        },
       ],
     },
     {
@@ -123,6 +168,12 @@ const Shop = () => {
           name: "Cloud Waltz",
           image: dressWhiteTiered,
           description: "Ivory organza ballgown with corseted bodice and cascading ruffled tiers",
+        },
+        {
+          id: 30,
+          name: "Lace Reverie",
+          image: dressBridalLaceVeil,
+          description: "Romantic ivory lace mermaid gown with bishop sleeves and cathedral veil",
         },
       ],
     },
@@ -171,6 +222,12 @@ const Shop = () => {
           name: "The Sovereign",
           image: dressBurgundyLaceTrain,
           description: "Burgundy mermaid gown with black lace illusion, dramatic train, and regal presence",
+        },
+        {
+          id: 31,
+          name: "Noir Keyhole Majesty",
+          image: dressNoirKeyhouleTrain,
+          description: "Black lace halter gown with keyhole neckline, pearl accent and sweeping train",
         },
       ],
     },
